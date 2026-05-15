@@ -12,7 +12,7 @@ jobs:
               if: ${{ cancelled() }}
               run: echo "Runs on Canceled"
             - name: Runs on any case
-              if: ${{ cancelled() }}
+              if: ${{ always() }}
               run: echo "Runs on any case"
             - name: Runs on Success
               if: ${{ success() }}
