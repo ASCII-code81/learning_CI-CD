@@ -1,4 +1,4 @@
-name: Nineth Workflow
+name: Ten Workflow
 on: [push]
     
 
@@ -9,7 +9,9 @@ jobs:
       - name: Contexts and Expressions
         id: context-expression
         run: | 
-            echo ${{ toJson(github) }}
-            echo ${{ toJson(runner) }}
-            echo ${{ toJson(job) }}
-            echo ${{ toJson(steps) }}
+            cat << 'EOF'
+            ${{ toJson(github) }}
+            ${{ toJson(runner) }}
+            ${{ toJson(job) }}
+            ${{ toJson(steps) }}
+            EOF
