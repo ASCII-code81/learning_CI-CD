@@ -3,9 +3,8 @@ on: push
 
 jobs: 
     test-timeout:
-        runs-on: ubunty-latest
-        timeout-minutes: 1
+        runs-on: ubuntu-latest
         steps:
             - name: Some Step
-              run: sleep 200
-              
+              run: sleep 10
+              timeout-minutes: 1
