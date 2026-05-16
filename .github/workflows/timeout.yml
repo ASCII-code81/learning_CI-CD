@@ -1,0 +1,11 @@
+name: Test Timeout
+on: push
+
+jobs: 
+    test-timeout:
+        runs-on: ubunty-latest
+        timeout-minutes: 1
+        steps:
+            - name: Some Step
+              run: sleep 200
+              
